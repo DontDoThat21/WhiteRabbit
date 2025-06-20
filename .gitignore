@@ -1,32 +1,151 @@
-# Prerequisites
-*.d
+# Matrix Rain OLED - .gitignore
 
-# Compiled Object files
-*.slo
-*.lo
+# ============================================================================
+# Arduino IDE
+# ============================================================================
+# Compiled binaries
+*.hex
+*.elf
+*.map
+*.lst
+*.sym
+*.lss
+*.eep
+*.srec
+*.bin
+
+# Build directories
+build/
+*.fqbn
+
+# Arduino IDE specific
+.arduino/
+libraries/*/examples/
+libraries/*/extras/
+
+# Arduino core cache
+cores/
+variants/
+tools/
+
+# ============================================================================
+# ESP32 Specific
+# ============================================================================
+*.bin
+*.img
+*.map
+*.elf
+bootloader.bin
+partitions.bin
+firmware.bin
+spiffs.bin
+
+# IDF build artifacts
+build/
+sdkconfig
+sdkconfig.old
+dependencies.lock
+
+# ============================================================================
+# C/C++ Compiled Objects
+# ============================================================================
 *.o
+*.lo
+*.ko
 *.obj
-
-# Precompiled Headers
+*.elf
+*.ilk
+*.map
+*.exp
 *.gch
 *.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
 *.lib
+*.a
+*.la
+*.lo
+*.dll
+*.so
+*.so.*
+*.dylib
 
-# Executables
-*.exe
-*.out
-*.app
+# ============================================================================
+# Configuration & Secrets
+# ============================================================================
+# WiFi credentials and API keys
+secrets.h
+config_local.h
+wifi_credentials.h
+*.key
+*.pem
+*.crt
+
+# Personal configuration overrides
+config_personal.h
+user_config.h
+
+# ============================================================================
+# IDE & Editor Files
+# ============================================================================
+# Visual Studio Code
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/*.db
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Code::Blocks
+*.layout
+*.depend
+
+# ============================================================================
+# OS Generated Files
+# ============================================================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
